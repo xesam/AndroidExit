@@ -34,12 +34,12 @@ public class DoubleTapExit {
 
         if (shouldIntercept) {
             long current = SystemClock.elapsedRealtime();
-            if (current - lastTap <= interval && tapCount >= 1) {
-                onInterceptTap(2);
+            if (current - lastTap <= interval && tapCount >= 2) {
+                onInterceptTap(tapCount);
                 activity.finish();
             } else {
-                tapCount = 0;
-                onInterceptTap(1);
+                tapCount = 1;
+                onInterceptTap(tapCount);
                 lastTap = current;
             }
             tapCount++;
