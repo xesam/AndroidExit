@@ -5,6 +5,8 @@
 我们主张遵循 Android 的交互规范，不需要主动关闭 APP。
 这里涉及的操作主要是为了应对从 App 深层次退出的需求。
 
+演示代码 [https://github.com/xesam/AndroidExit/blob/master/app/src/main/java/dev/xesam/android/exit/Sub2Activity.java](https://github.com/xesam/AndroidExit/blob/master/app/src/main/java/dev/xesam/android/exit/Sub2Activity.java)
+
 ## System.exit()
 
 不推荐。应用可能会自动重启，或者提示错误，视系统而定。
