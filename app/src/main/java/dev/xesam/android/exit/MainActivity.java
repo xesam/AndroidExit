@@ -12,6 +12,16 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        int exitCode = intent.getIntExtra(AppExit.EXTRA_EXIT, 0);
+        if (exitCode == 1) {
+            finish();
+        }
+    }
+
+    @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
     }
