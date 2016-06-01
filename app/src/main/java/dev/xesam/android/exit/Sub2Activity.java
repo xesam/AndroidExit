@@ -1,6 +1,6 @@
 package dev.xesam.android.exit;
 
-import android.content.Intent;
+import android.view.View;
 
 public class Sub2Activity extends BaseActivity {
 
@@ -10,6 +10,16 @@ public class Sub2Activity extends BaseActivity {
 
     @Override
     protected void onBtnClick() {
-        startActivity(new Intent(this, Sub2Activity.class));
+        AppExit.systemExit();
+    }
+
+    @Override
+    protected void onViewCreated() {
+        findViewById(R.id.system_exit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppExit.systemExit();
+            }
+        });
     }
 }

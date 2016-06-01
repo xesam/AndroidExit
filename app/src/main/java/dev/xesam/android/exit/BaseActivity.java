@@ -2,7 +2,6 @@ package dev.xesam.android.exit;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 
 /**
@@ -10,15 +9,19 @@ import android.view.View;
  */
 public class BaseActivity extends Activity {
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        onViewCreated();
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBtnClick();
             }
         });
+    }
+
+    protected void onViewCreated(){
     }
 
     protected int getLayoutId() {
