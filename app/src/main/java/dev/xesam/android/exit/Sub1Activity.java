@@ -2,15 +2,14 @@ package dev.xesam.android.exit;
 
 import android.content.Intent;
 
-public class MainActivity extends BaseActivity {
+public class Sub1Activity extends BaseActivity {
 
-    @Override
     protected int getLayoutId() {
-        return R.layout.activity_main;
+        return R.layout.activity_sub1;
     }
 
     @Override
     protected void onBtnClick() {
-        startActivity(new Intent(this, Sub1Activity.class));
+        startActivity(new Intent(this, Sub2Activity.class));
     }
 }
