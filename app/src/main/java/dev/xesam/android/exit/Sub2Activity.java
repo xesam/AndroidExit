@@ -21,5 +21,11 @@ public class Sub2Activity extends BaseActivity {
                 AppExit.systemExit();
             }
         });
+        findViewById(R.id.stack).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppActivityStack.getInstance().finishAllActivity();
+            }
+        });
     }
 }

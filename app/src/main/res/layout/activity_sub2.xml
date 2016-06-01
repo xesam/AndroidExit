@@ -21,4 +21,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="system_exit" />
+    <Button
+        android:id="@+id/stack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stack" />
 </LinearLayout>

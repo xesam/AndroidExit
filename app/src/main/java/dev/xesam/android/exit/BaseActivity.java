@@ -11,6 +11,7 @@ public class BaseActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppActivityStack.getInstance().onCreate(this);
         setContentView(getLayoutId());
         onViewCreated();
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
@@ -21,7 +22,13 @@ public class BaseActivity extends Activity {
         });
     }
 
-    protected void onViewCreated(){
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        AppActivityStack.getInstance().onDestroy(this);
+    }
+
+    protected void onViewCreated() {
     }
 
     protected int getLayoutId() {
