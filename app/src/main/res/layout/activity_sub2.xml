@@ -31,4 +31,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="stack2" />
+    <Button
+        android:id="@+id/broadcastExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="broadcastExit" />
 </LinearLayout>

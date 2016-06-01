@@ -33,5 +33,11 @@ public class Sub2Activity extends BaseActivity {
                 ((StackApp) getApplication()).finishAllActivity();
             }
         });
+        findViewById(R.id.broadcastExit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ExitBroadcastReceiver.broadcastExit(getApplicationContext());
+            }
+        });
     }
 }
